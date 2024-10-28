@@ -1,6 +1,8 @@
 import {User} from "../src/User";
 import {Processor} from "../src/Processor";
 
+describe('Tests for Processor', () => {
+
 let user: User
 let processor: Processor
 
@@ -69,4 +71,6 @@ describe('when users aged 18 or over', () => {
         expect(user.consentGiven).toBe(false)
         //console.log(user.consentGiven)
     })
+})
+
 })
