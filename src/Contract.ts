@@ -8,7 +8,7 @@ export class Contract {
 
     constructor(title: string, signed: boolean) {
         this.title = title;
-        this.signed = false;
+        this.signed = signed;
     }
 
     isMobileIdActivated(user: UserEstonia): boolean {

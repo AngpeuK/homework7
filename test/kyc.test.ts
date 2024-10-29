@@ -13,13 +13,13 @@ describe('Tests for Estonia', () => {
     })
     test('Verify if new mobileIdAuthorization field for user from Estonia is undefined', () => {
         expect(user.mobileIdAuthorization).toBeUndefined()
-        console.log(user.mobileIdAuthorization)
+        //console.log(user.mobileIdAuthorization)
     })
 
     test('Verify that activateMobileIDForEstonia method activates field mobileIdAuthorization when age for user is eligible', () => {
         kyc.activateMobileIDForEstonia(user)
         expect(user.mobileIdAuthorization).toBe(true)
-        console.log(user.mobileIdAuthorization)
+        //console.log(user.mobileIdAuthorization)
     })
 
     test('Attempt to activate Mobile ID for user with not eligible age ends up with thrown error "User is too young"', () => {
@@ -28,7 +28,7 @@ describe('Tests for Estonia', () => {
         expect(() => {
             kyc.activateMobileIDForEstonia(user)
         }).toThrowError('User is too young')
-        console.log(user.mobileIdAuthorization)
+        //console.log(user.mobileIdAuthorization)
     })
 
 })
@@ -44,13 +44,13 @@ describe('Tests for Latvia', () => {
     })
     test('Verify if new mobileIdAuthorization field for user from Estonia is undefined', () => {
         expect(user.activateEParakstsForLatvia).toBeUndefined()
-        console.log(user.activateEParakstsForLatvia)
+        //console.log(user.activateEParakstsForLatvia)
     })
 
     test('Verify that activateMobileIDForEstonia method activates field mobileIdAuthorization when age for user is eligible', () => {
         kyc.activateEParakstsForLatvia(user)
         expect(user.activateEParakstsForLatvia).toBe(true)
-        console.log(user.activateEParakstsForLatvia)
+        //console.log(user.activateEParakstsForLatvia)
     })
 
     test('Attempt to activate Mobile ID for user with not eligible age ends up with thrown error "User is too young"', () => {
@@ -59,7 +59,7 @@ describe('Tests for Latvia', () => {
         expect(() => {
             kyc.activateEParakstsForLatvia(user)
         }).toThrowError('User is too young')
-        console.log(user.activateEParakstsForLatvia)
+        //console.log(user.activateEParakstsForLatvia)
     })
 
 })
