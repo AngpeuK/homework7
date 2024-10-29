@@ -6,10 +6,6 @@ let userEstonia: UserEstonia
 let userLatvia: UserLatvia
 let contract: Contract
 
-// Тестируйте, что контракт не может быть подписан, если Mobile ID авторизация не активирована.
-
-// Проверьте, что после активации Mobile ID авторизации контракт может быть успешно подписан, и статус контракта меняется на signed: true
-
 describe('Tests for class Contract for user Estonia and Latvia', () => {
 
     beforeEach(() => {
