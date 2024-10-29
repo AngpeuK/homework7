@@ -1,14 +1,29 @@
+import {UserEstonia} from "./UserEstonia";
+import {UserLatvia} from "./UserLatvia";
+
 export class Contract {
     title: string
-    signed: boolean = false
+    signed: boolean
 
-    constructor() {
+
+    constructor(title: string, signed: boolean) {
+        this.title = title;
+        this.signed = false;
     }
 
-    //sign(user: UserEstonia): void =>{
-    //user.signed = true
-}
+    isMobileIdActivated(user: UserEstonia): boolean {
+        return user.age >= 16
+    }
 
-    //isMobileIdActivated
+    isEParakstsActivated(user: UserLatvia): boolean {
+        return user.age >= 18
+    }
 
+    signForUserEstonia(user: UserEstonia): boolean {
+        return user.mobileIdAuthorization = this.isMobileIdActivated(user)
+    }
+
+    signForUserLatvia(user: UserLatvia): boolean {
+        return user.activateEParakstsForLatvia = this.isEParakstsActivated(user)
+    }
 }
